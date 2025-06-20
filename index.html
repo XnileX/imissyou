@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss You Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <div class="clipboard" id="left-clip">Are you in love?</div>
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button class="btn gray">C</button>
+                <button class="btn gray">CE</button>
+                <button class="btn orange">/</button>
+                <button class="btn orange">×</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn orange">-</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn orange">+</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn gray">0</button>
+                <button class="btn orange equal">=</button>
+            </div>
+        </div>
+        <div class="clipboard" id="right-clip">Did someone break your heart?</div>
+    </div>
+
+    <video id="inloveVideo" style="display:none;">
+        <source src="video/sad.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video id="brokenVideo" style="display:none;">
+        <source src="video/broke.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script src="script.js"></script>
+</body>
+</html>

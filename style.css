@@ -1,0 +1,136 @@
+body {
+    background: linear-gradient(135deg, #a3a1ff 0%, #fbc2eb 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: #232323;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 15px;
+    width: 80%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    background: #111;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: justify-content 0.3s;
+    overflow: hidden;
+}
+
+/* Center text when showing the message */
+.display[style*="center"] {
+    justify-content: center !important;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    height: 50px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background: #030303;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn.gray {
+    background: #d3d3d3;
+    color: #232323;
+}
+
+.btn.orange {
+    background: #3b3322;
+    color: #fff;
+}
+
+.btn.equal {
+    grid-column: span 2;
+}
+
+.btn:active {
+    filter: brightness(0.9);
+}
+
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.clipboard {
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid yellow;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, background 0.3s;
+    position: relative;
+}
+
+.clipboard:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 690px) {
+    .layout {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .clipboard {
+        width: 80%;
+        height: 120px;
+        margin: 0 auto;
+    }
+    .calculator {
+        padding: 15px;
+    }
+    .buttons {
+        grid-gap: 8px;
+    }
+    .btn {
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
